@@ -22,10 +22,10 @@ a {
 }
 
 img {
-    display: block;
     max-width: 100%;
     width: 100%;
     border-radius: 5px;
+    display: block;
 }
 
 p {
@@ -45,9 +45,15 @@ p {
     /* padding: 0 1.5rem; */
 }
 
+@media(max-width:1200px) {
+    .container {
+        grid-template-areas: "header header header" "sidenav content content" "sidenav adverts adverts" "footer footer footer";
+    }
+}
+
 @media(max-width:750px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-areas: "header" "sidenav" "content" "adverts" "footer";
     }
 }
@@ -263,7 +269,6 @@ p {
         grid-template-columns: auto;
     }
     .content__characteristics {
-        /* align-content: center; */
         justify-content: center;
     }
     .content__title h1 {
