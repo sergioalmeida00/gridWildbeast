@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -119,12 +120,15 @@ p {
     max-width: 8rem;
     min-width: 6rem;
     border-radius: 5px;
-    background: white;
     box-shadow: var(--shadow);
     transition: .5s ease-out;
 }
 
 .sidenav__item a:hover {
+    background-color: var(--ligth);
+}
+
+.sidenav__item--active {
     background-color: var(--ligth);
 }
 
@@ -293,4 +297,25 @@ p {
     color: white;
     font-weight: bold;
     padding: 1.5rem;
+}
+
+.start {
+    position: fixed;
+    bottom: 1rem;
+    right: .8rem;
+    background: var(--transparent-hover);
+    padding: .5rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+    transform: translateY(-100%);
+}
+
+.start--active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
